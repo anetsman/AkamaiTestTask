@@ -1,0 +1,5 @@
+Pages\MainPage.class
+Pages\BasePage.class
+AkamaiTests.class
+utils\WebDriverHelper.class
+Pages\SearchResultsPage.class
