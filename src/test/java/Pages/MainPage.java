@@ -3,7 +3,6 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import utils.WebDriverHelper;
 
 import java.util.HashMap;
@@ -16,7 +15,6 @@ public class MainPage {
     private static final String Url = "https://akamaijobs.referrals.selectminds.com/";
     private static final By searchField = By.id("keyword");
     private static final By searchLocationField = By.id("jLocInputHldr");
-//    private static final String locationSelector = ".//*[@id='location_facet']/option[contains(text(), '%s')]";
     private static final HashMap<String, By> dropdownLocations = new HashMap<>();
     static {
         dropdownLocations.put("Krakow, Poland", By.cssSelector("#location_facet_chzn_o_12"));
@@ -32,7 +30,6 @@ public class MainPage {
 
     public void get() {
         driver.get(Url);
-//        webDriverHelper.checkPageIsReady();
     }
 
     public void searchForJob(String jobTitle, String location) {
