@@ -22,6 +22,7 @@ public class MainPage {
     private static final By searchBtn = By.id("jSearchSubmit");
     private static final By spinner = By.className("spinner");
     private static final By jobList = By.xpath(".//*[@id='job_results_list_hldr']/div");
+    private static final By noJobResultMsg = By.className("search_result_sentence");
 
     public MainPage(WebDriverHelper webDriverHelper) {
         this.webDriverHelper = webDriverHelper;
@@ -56,5 +57,9 @@ public class MainPage {
 
     public List<WebElement> getJobList() {
         return driver.findElements(jobList);
+    }
+
+    public String getErrorSearchingJobMessage() {
+        return driver.findElement(noJobResultMsg).getText();
     }
 }

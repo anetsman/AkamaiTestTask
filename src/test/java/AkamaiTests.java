@@ -31,7 +31,8 @@ public class AkamaiTests {
     public void NegativeSearchForAJobTest() {
         mainPage.get();
         mainPage.searchForJob("XXX");
-        Assert.assertTrue(mainPage.getJobList().size() > 0);
+        Assert.assertEquals(mainPage.getErrorSearchingJobMessage(),
+                "Your search matching keyword(s) XXX did not return any job results.");
     }
 
     @AfterMethod
