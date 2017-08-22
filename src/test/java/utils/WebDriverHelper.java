@@ -23,15 +23,7 @@ public class WebDriverHelper {
         field.sendKeys(text);
     }
 
-    public void waitForElementDisappeared(By element, int timeout) {
-        new WebDriverWait(driver, timeout).until(ExpectedConditions.invisibilityOfElementLocated(element));
+    public void waitForElementDisappeared(WebElement element, int timeout) {
+        new WebDriverWait(driver, timeout).until(ExpectedConditions.invisibilityOf(element));
     }
-
-//    public void checkPageIsReady() {
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        //Initially bellow given if condition will check ready state of page.
-//        if (js.executeScript("return document.readyState").toString().equals("complete")) {
-//            System.out.println("Page Is loaded.");
-//        }
-//    }
 }
